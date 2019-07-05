@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/grad_bg"
+        android:orientation="horizontal"
+        tools:context=".HomeActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grad_bg_rev"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toolbar Title"
+                android:layout_gravity="center"
+                android:id="@+id/toolbarTitle"
+                android:textSize="25dp"
+                android:fontFamily="sans-serif-smallcaps"/>
+
+            <ImageView
+                android:id="@+id/cartHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:onClick="cartHome"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:paddingRight="15dp"
+                android:src="@drawable/ic_add_shopping_cart_black_24dp"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/add1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_below="@+id/toolbar"
+            android:src="@drawable/phdoubledeal1"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_below="@+id/add1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/pizza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_below="@+id/recyclerview"
+            android:src="@drawable/pizzamargherita"/>
+
+        <ImageView
+            android:id="@+id/add2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="30dp"
+            android:layout_below="@+id/pizza"
+            android:src="@drawable/phdoubledeal2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add2"
+            android:text="Developed By : Vishwa Dhananjaya"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+</ScrollView>

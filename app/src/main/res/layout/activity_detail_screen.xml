@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/grad_bg"
+        android:orientation="horizontal"
+        tools:context=".DetailScreenActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grad_bg_rev"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Toolbar Title"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:adjustViewBounds="true"
+                android:onClick="cartDetails"
+                android:paddingRight="15dp"
+                android:src="@drawable/ic_add_shopping_cart_black_24dp" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/largeImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/largeImage"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-medium"
+            android:padding="10dp"
+            android:textSize="20dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/size"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/details">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:id="@+id/button1"
+                android:background="@drawable/btn_bg"
+                android:text="Small"
+                android:onClick="small"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="@color/white"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:id="@+id/button2"
+                android:background="@drawable/btn_bg"
+                android:text="Medium"
+                android:onClick="medium"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"/>
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:id="@+id/button3"
+                android:background="@drawable/btn_bg"
+                android:text="Large"
+                android:onClick="large"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/size"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/btn_bg"
+                android:onClick="minus"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="35dp" />
+
+            <Button
+                android:id="@+id/value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_bg"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="25dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/btn_bg"
+                android:onClick="plus"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="35dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/quantity"
+            android:background="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/sizetag">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Size"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/sizeSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Small"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/sizetag"
+            android:background="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view2"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/pricetag">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Price"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/priceSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/pricetag"
+            android:background="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view3"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/quantitytag">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Quantity"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/quantitySet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="20dp"
+                android:text="1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/quantitytag"
+            android:background="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/view4"
+            android:id="@+id/totalset">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Total Price"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/totalSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/totalset"
+            android:background="@android:color/white"
+            android:layout_marginBottom="80dp"/>
+
+        <RelativeLayout
+            android:id="@+id/relat2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:fontFamily="sans-serif"
+                android:onClick="order"
+                android:text="Order Now"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

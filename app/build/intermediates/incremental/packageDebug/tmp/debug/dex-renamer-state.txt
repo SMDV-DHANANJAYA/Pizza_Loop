@@ -1,0 +1,4 @@
+#Fri Jul 05 21:12:36 IST 2019
+base.0=/home/smdv-dhananjaya/Projects_files/AndroidStudioProjects/Pizza_Loop/app/build/intermediates/dex/debug/mergeDexDebug/out
+path.0=classes.dex
+renamed.0=classes.dex

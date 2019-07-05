@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/smdv-dhananjaya/Projects_files/AndroidStudioProjects/Pizza_Loop/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v27/values-v27.xml",
+            "map": [
+                {
+                    "source": "/home/smdv-dhananjaya/Projects_files/AndroidStudioProjects/Pizza_Loop/app/src/main/res/values-v27/styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "103",
+                        "endLines": "11",
+                        "endColumns": "12",
+                        "endOffsets": "591"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "10",
+                        "endColumns": "12",
+                        "endOffsets": "543"
+                    }
+                }
+            ]
+        }
+    ]
+}
